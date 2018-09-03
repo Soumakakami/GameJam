@@ -26,7 +26,6 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 
 		state = GameState.Title;
 		AudioManager.PlayBGM("tw087");
-		StartCoroutine(GameStartWait());
 	}
 
 	public void Quit() {
@@ -44,7 +43,6 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 		Debug.Log("GameOver");
 		state = GameState.Result;
 		OnGameOver();
-		StartCoroutine(GameOverWait());
 	}
 
 	public void GameReset() {
@@ -58,16 +56,15 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 
 		//今いるシーンを読み込み
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-		StartCoroutine(GameStartWait());
 	}
 
-	IEnumerator GameStartWait() {
-		yield return new WaitForSeconds(1f);
-		GameStart();
-	}
+	//IEnumerator GameStartWait() {
+	//	yield return new WaitForSeconds(1f);
+	//	GameStart();
+	//}
 
-	IEnumerator GameOverWait() {
-		yield return new WaitForSeconds(1f);
-		GameReset();
-	}
+	//IEnumerator GameOverWait() {
+	//	yield return new WaitForSeconds(1f);
+	//	GameReset();
+	//}
 }
