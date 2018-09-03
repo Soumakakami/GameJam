@@ -5,18 +5,27 @@ using UnityEngine.UI;
 
 public class TitleController : MonoBehaviour {
 
-    Text clickText;      //クリックしてくださいのテキスト
+    Text clickText;         //クリックしてくださいのテキスト
+    Text titleName;          //タイトルのテキスト
 
-    bool fadeDone;       //FadeOutが完了したらtrue
+    bool fadeDone;          //FadeOutが完了したらtrue
 
     [SerializeField,Header("消えるまでの秒数")]
-    float fadeSpeed;         //消え切る時間
+    float fadeTime;         //消え切る時間
+    float fadeSpeed;        //消える速さ
 
     float alpha;        //TitleとTextのアルファ値
+
+    /// <summary>
+    /// 起動時にして置きたい処理
+    /// </summary>
     void SetUp()
     {
         clickText = GameObject.Find("ToClick").GetComponent<Text>();
+        titleName = GameObject.Find("TitleName").GetComponent<Text>();
+
         fadeDone = false;
+
         alpha = 1f;
     }
 
@@ -38,11 +47,12 @@ public class TitleController : MonoBehaviour {
     {
         while (alpha >= 0)
         {
-            alpha -= 0.01f;
+            alpha -= speed;
             clickText.color = new Color(0, 0, 0, alpha);
+            titleName.color = new Color(0, 0, 0, alpha);
             yield return null;
         }
-        yield return null;
+
     }
 
     /// <summary>
@@ -67,7 +77,8 @@ public class TitleController : MonoBehaviour {
     void Start ()
     {
         SetUp();
-	}
+        fadeSpeed = clickText.color.a / (fadeTime * 60);
+    }
 	
 	void Update ()
     {
