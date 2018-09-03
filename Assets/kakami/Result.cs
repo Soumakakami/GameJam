@@ -11,6 +11,8 @@ public class Result : MonoBehaviour {
     float multiplication;   //スコアに乗算する数値
 
     Text resultText;        //resultを表示させるText
+
+    bool test=false;
     // Use this for initialization
     void Start ()
     {
@@ -24,5 +26,13 @@ public class Result : MonoBehaviour {
         score = GameMaster.Instance.PlayerHeight;
         score = score * multiplication;
         resultText.text = score.ToString("")+"点";
+        test = true;
+    }
+    private void Update()
+    {
+        if (test&&Input.GetMouseButtonDown(0))
+        {
+            GameMaster.Instance.GameReset();
+        }
     }
 }
