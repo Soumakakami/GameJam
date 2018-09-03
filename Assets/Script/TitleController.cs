@@ -54,6 +54,11 @@ public class TitleController : MonoBehaviour {
         }
 
     }
+    private IEnumerator GameStart()
+    {
+        yield return StartCoroutine("Sumple",fadeSpeed);
+        GameMaster.Instance.GameStart();
+    }
 
     /// <summary>
     /// 呼び出せば元の状態に戻る
