@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TitleController : MonoBehaviour {
 
     Text clickText;         //クリックしてくださいのテキスト
-    Text titleName;          //タイトルのテキスト
+    Image titleImage;          //タイトルのテキスト
 
     bool fadeDone;          //FadeOutが完了したらtrue
 
@@ -22,7 +22,7 @@ public class TitleController : MonoBehaviour {
     void SetUp()
     {
         clickText = GameObject.Find("ToClick").GetComponent<Text>();
-        titleName = GameObject.Find("TitleName").GetComponent<Text>();
+        titleImage = GameObject.Find("Image").GetComponent<Image>();
 
         fadeDone = false;
 
@@ -49,7 +49,7 @@ public class TitleController : MonoBehaviour {
         {
             alpha -= speed;
             clickText.color = new Color(0, 0, 0, alpha);
-            titleName.color = new Color(0, 0, 0, alpha);
+            titleImage.color = new Color(1, 1, 1, alpha);
             yield return null;
         }
 
