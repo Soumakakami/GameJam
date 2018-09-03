@@ -24,7 +24,7 @@ public class EnemyControl : MonoBehaviour {
         if (modeChange)
         {
             transform.position += new Vector3(speed, 0, 0);
-            if (Mathf.Abs(transform.position.x) >= distance)
+            if (Mathf.Abs(transform.position.x) > distance)
             {
                 speed *= -1;
             }
@@ -32,7 +32,7 @@ public class EnemyControl : MonoBehaviour {
         else
         {
             transform.position += new Vector3(speed,0,0);
-            if (Mathf.Abs(transform.position.x) >= distance)
+            if (Mathf.Abs(transform.position.x) > distance)
             {
                 transform.position=fastPos;
             }
@@ -50,38 +50,7 @@ public class EnemyControl : MonoBehaviour {
 	
 void aaaa()
 {
-    switch (modeChange)
-    {
-        case true:
-            switch (moveChangeLeftRight)
-            {
-                case true:
-                    transform.position += new Vector3(speed, 0, 0);
-                        //if (transform.position.x >= distance || transform.position.x <= -distance)
-                    if (Mathf.Abs(transform.position.x) >= distance)
-                    {
-                            moveChangeLeftRight = false;
-                    }
-                    break;
 
-                case false:
-                    transform.position += new Vector3(speed * -1, 0, 0);
-                    if (Mathf.Abs(transform.position.x) >= distance)
-                    {
-                        moveChangeLeftRight = true;
-                    }
-                    break;
-            }
-            break;
-
-        case false:
-            transform.position += new Vector3(speed, 0, 0);
-            if (transform.position.x >= distance || transform.position.x <= -distance)
-            {
-                transform.position = fastPos;
-            }
-            break;
-            }
     }
 	void Update ()
     {
