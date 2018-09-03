@@ -25,6 +25,7 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 		base.Init();
 
 		state = GameState.Title;
+		AudioManager.PlayBGM("tw087");
 		StartCoroutine(GameStartWait());
 	}
 
