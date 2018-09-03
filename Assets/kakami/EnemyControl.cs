@@ -23,7 +23,7 @@ public class EnemyControl : MonoBehaviour {
 
         if (modeChange)
         {
-            transform.position += new Vector3(speed, 0, 0);
+            transform.position += new Vector3(speed, 0, 0)*Time.deltaTime;
             if (Mathf.Abs(transform.position.x) > distance)
             {
                 speed *= -1;
@@ -34,7 +34,7 @@ public class EnemyControl : MonoBehaviour {
         }
         else
         {
-            transform.position += new Vector3(speed,0,0);
+            transform.position += new Vector3(speed,0,0) * Time.deltaTime;
             if (Mathf.Abs(transform.position.x) > distance)
             {
                 transform.position=fastPos;
