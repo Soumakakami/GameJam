@@ -20,10 +20,11 @@ public class PlayerMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-		Debug.Log("Awake");
 		rig = GetComponent<Rigidbody2D>();
 		Freeze = true;
-		GameMaster.Instance.OnGameStart += () => Freeze = false; ;
+
+		//ゲームのタイミングで止まったり止まらなかったりする
+		GameMaster.Instance.OnGameStart += () => Freeze = false;
 		GameMaster.Instance.OnGameOver += () => Freeze = true;
 	}
 	
@@ -36,5 +37,6 @@ public class PlayerMove : MonoBehaviour {
 
 		rig.AddForce(new Vector2(Input.GetAxisRaw("Horizontal") * movePower, 0));
 
+		GameMaster.Instance.PlayerHeight = transform.position.y;
 	}
 }

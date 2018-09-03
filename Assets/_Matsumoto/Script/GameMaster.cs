@@ -14,6 +14,10 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 
 	GameState state;
 
+	//プロパティ
+	public float PlayerHeight { get; set; }
+
+	//イベント
 	public event UnityAction OnGameStart;
 	public event UnityAction OnGameOver;
 
@@ -31,6 +35,7 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 	public void GameStart() {
 		Debug.Log("GameStart");
 		state = GameState.Game;
+		//登録してあるメソッドをすべて実行する
 		OnGameStart();
 	}
 
@@ -42,13 +47,18 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 	}
 
 	public void GameReset() {
-		//今いるシーンを読み込み
+
+		//登録してあるイベントをいったんすべて削除
 		OnGameStart = null;
 		OnGameOver = null;
+
+		//データのリセット
+		PlayerHeight = 0.0f;
+
+		//今いるシーンを読み込み
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		StartCoroutine(GameStartWait());
 	}
-
 
 	IEnumerator GameStartWait() {
 		yield return new WaitForSeconds(1f);
