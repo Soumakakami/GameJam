@@ -23,6 +23,7 @@ public class Result : MonoBehaviour {
     }
     void ResultTextWriting()
     {
+        IntermediateObj.SetActive(true);
         score = GameMaster.Instance.PlayerHeight;
         score = score * multiplication;
         resultText.text = score.ToString("")+"点";
