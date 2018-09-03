@@ -5,6 +5,7 @@ using UnityEngine;
 public class FollowCamra : MonoBehaviour {
 
 	public Transform target;
+	public float minHeight;
 
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -12,7 +13,8 @@ public class FollowCamra : MonoBehaviour {
 		if(!target) return;
 
 		var pos = transform.position;
-		pos.y = target.position.y;
+		pos.y = Mathf.Max(target.position.y, minHeight);
+
 		transform.position = pos;
 
 	}

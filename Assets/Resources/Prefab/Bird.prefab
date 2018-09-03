@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveChangeLeftRight: 0
   modeChange: 0
-  speed: 0
+  speed: 3
   distance: 4
 --- !u!212 &212031096900628924
 SpriteRenderer:

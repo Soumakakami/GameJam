@@ -15,7 +15,7 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 	GameState state;
 
 	//プロパティ
-	public float PlayerHeight { get; set; }
+	public float PlayerBoundCount { get; set; }
 
 	//イベント
 	public event UnityAction OnGameStart;
@@ -52,19 +52,9 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 		OnGameOver = null;
 
 		//データのリセット
-		PlayerHeight = 0.0f;
+		PlayerBoundCount = 0;
 
 		//今いるシーンを読み込み
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
-
-	//IEnumerator GameStartWait() {
-	//	yield return new WaitForSeconds(1f);
-	//	GameStart();
-	//}
-
-	//IEnumerator GameOverWait() {
-	//	yield return new WaitForSeconds(1f);
-	//	GameReset();
-	//}
 }

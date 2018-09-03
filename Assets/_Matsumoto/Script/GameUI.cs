@@ -18,7 +18,7 @@ public sealed class GameUI : MonoBehaviour {
 
 	void Update() {
 
-		distanceText.text = GameMaster.Instance.PlayerHeight.ToString("0000.0") + "m";
+		distanceText.text = GameMaster.Instance.PlayerBoundCount + "回";
 	}
 
 	public void Show() {

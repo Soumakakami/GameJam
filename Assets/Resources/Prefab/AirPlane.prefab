@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveChangeLeftRight: 0
   modeChange: 0
-  speed: 0
+  speed: 6
   distance: 4
 --- !u!114 &114856619286759772
 MonoBehaviour:

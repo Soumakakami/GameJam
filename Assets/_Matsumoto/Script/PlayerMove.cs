@@ -36,7 +36,5 @@ public class PlayerMove : MonoBehaviour {
 	void MoveUpdate() {
 
 		rig.AddForce(new Vector2(Input.GetAxisRaw("Horizontal") * movePower, 0));
-
-		GameMaster.Instance.PlayerHeight = transform.position.y;
 	}
 }
