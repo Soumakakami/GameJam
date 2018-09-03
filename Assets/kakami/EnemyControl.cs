@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour {
 
+	public float delay;
+	bool isStart = false;
     [SerializeField, Header("敵の動きtrueが右")]
     bool moveChangeLeftRight;        //敵の左右の動きを変える
     [SerializeField, Header("敵の行動trueが行ったり来たり")]
@@ -31,7 +33,7 @@ public class EnemyControl : MonoBehaviour {
 
     void EnemyMove()
     {
-
+		if(!isStart) return;
 
         if (modeChange)
         {
@@ -71,7 +73,15 @@ public class EnemyControl : MonoBehaviour {
         {
             speed *= -1;
         }
+
+		GameMaster.Instance.OnGameStart += () => { StartCoroutine(StartDelay()); };
     }
+
+	public IEnumerator StartDelay() {
+		yield return new WaitForSeconds(delay);
+		isStart = true;
+
+	}
 	
 void aaaa()
 {
@@ -82,3 +92,5 @@ void aaaa()
         EnemyMove();
 	}
 }
+
+
