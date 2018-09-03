@@ -6,9 +6,7 @@ using UnityEngine.UI;
 public class Result : MonoBehaviour {
     GameObject IntermediateObj;
 
-    float score;            //プレイヤーが取得したスコア
-    [SerializeField,Header("乗算させる値")]
-    float multiplication;   //スコアに乗算する数値
+    int score;            //プレイヤーが取得したスコア
 
     Text resultText;        //resultを表示させるText
 
@@ -24,9 +22,8 @@ public class Result : MonoBehaviour {
     void ResultTextWriting()
     {
         IntermediateObj.SetActive(true);
-        score = GameMaster.Instance.PlayerHeight;
-        score = score * multiplication;
-        resultText.text = score.ToString("")+"点";
+        score = GameMaster.Instance.PlayerBoundCount;
+        resultText.text = score.ToString("")+"回";
         test = true;
     }
     private void Update()
