@@ -15,7 +15,7 @@ public sealed class GameMaster : SingletonMonoBehaviour<GameMaster> {
 	GameState state;
 
 	//プロパティ
-	public float PlayerBoundCount { get; set; }
+	public int PlayerBoundCount { get; set; }
 
 	//イベント
 	public event UnityAction OnGameStart;
