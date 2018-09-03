@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1183253926841712}
+  m_RootGameObject: {fileID: 1433147888960206}
   m_IsPrefabAsset: 1
---- !u!1 &1183253926841712
+--- !u!1 &1433147888960206
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4682414529913040}
-  - component: {fileID: 212500023995716230}
-  - component: {fileID: 58787262837483324}
-  - component: {fileID: 114031823426830748}
-  m_Layer: 0
-  m_Name: Cloud
+  - component: {fileID: 4481518875052664}
+  - component: {fileID: 212490541717195644}
+  - component: {fileID: 114539011660485674}
+  - component: {fileID: 60631039829595290}
+  m_Layer: 10
+  m_Name: Cloud2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4682414529913040
+--- !u!4 &4481518875052664
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183253926841712}
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_GameObject: {fileID: 1433147888960206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.01, y: 2.18, z: 0}
-  m_LocalScale: {x: 0.92, y: 0.866, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
---- !u!58 &58787262837483324
-CircleCollider2D:
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60631039829595290
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183253926841712}
+  m_GameObject: {fileID: 1433147888960206}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -55,14 +55,57 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &114031823426830748
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.52, y: 1.46}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.71, y: -0.61}
+      - {x: 0.82, y: -0.53}
+      - {x: 1.13, y: -0.37}
+      - {x: 1.24, y: -0.25}
+      - {x: 1.26, y: -0.17999999}
+      - {x: 1.26, y: 0.049999997}
+      - {x: 1.22, y: 0.14}
+      - {x: 1.11, y: 0.26}
+      - {x: 0.89, y: 0.38}
+      - {x: 0.79999995, y: 0.42}
+      - {x: 0.53999996, y: 0.42}
+      - {x: 0.35999998, y: 0.61}
+      - {x: 0.16, y: 0.71999997}
+      - {x: 0.12, y: 0.72999996}
+      - {x: -0.24, y: 0.72999996}
+      - {x: -0.35999998, y: 0.7}
+      - {x: -0.44, y: 0.65999997}
+      - {x: -0.63, y: 0.52}
+      - {x: -0.7, y: 0.53999996}
+      - {x: -0.96999997, y: 0.53}
+      - {x: -1.0799999, y: 0.45}
+      - {x: -1.18, y: 0.35}
+      - {x: -1.26, y: 0.22}
+      - {x: -1.26, y: -0.16}
+      - {x: -1.22, y: -0.22999999}
+      - {x: -1, y: -0.39999998}
+      - {x: -0.89, y: -0.42}
+      - {x: -0.81, y: -0.56}
+      - {x: -0.66999996, y: -0.71}
+      - {x: -0.63, y: -0.72999996}
+      - {x: -0.26999998, y: -0.72999996}
+      - {x: 0.13, y: -0.68}
+      - {x: 0.22, y: -0.72999996}
+      - {x: 0.55, y: -0.72999996}
+--- !u!114 &114539011660485674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183253926841712}
+  m_GameObject: {fileID: 1433147888960206}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4784f02f7d33e6f4b9760ad6b20581c5, type: 3}
@@ -70,12 +113,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuation: 0.5
   playSEName: CloudSE
---- !u!212 &212500023995716230
+--- !u!212 &212490541717195644
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1183253926841712}
+  m_GameObject: {fileID: 1433147888960206}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -105,8 +148,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3d10c48fd66d34a49bea23d15be0addb, type: 3}
-  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 92642bfb800f0d14c820f5fd2f42f7b2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

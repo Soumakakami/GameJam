@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4331034861011320}
   - component: {fileID: 212031096900628924}
-  - component: {fileID: 61000601983674804}
   - component: {fileID: 114231342829404070}
-  m_Layer: 0
+  - component: {fileID: 114845195876318864}
+  - component: {fileID: 60059437492303548}
+  m_Layer: 10
   m_Name: Bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,15 +36,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1046706061683702}
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.74, y: 1.6, z: 0}
-  m_LocalScale: {x: 0.92, y: 0.866, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
---- !u!61 &61000601983674804
-BoxCollider2D:
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60059437492303548
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -58,15 +59,88 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.15, y: 1.44}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.965, y: -0.39999998}
+      - {x: 1.105, y: -0.45999998}
+      - {x: 1.3349999, y: -0.5}
+      - {x: 1.365, y: -0.44}
+      - {x: 1.245, y: -0.37}
+      - {x: 1.355, y: -0.37}
+      - {x: 1.4649999, y: -0.35999998}
+      - {x: 1.535, y: -0.31}
+      - {x: 1.5649999, y: -0.25}
+      - {x: 1.5649999, y: -0.21}
+      - {x: 1.495, y: -0.19}
+      - {x: 1.415, y: -0.19999999}
+      - {x: 1.415, y: -0.14999999}
+      - {x: 1.395, y: -0.13}
+      - {x: 1.375, y: -0.13}
+      - {x: 1.055, y: -0.21}
+      - {x: 0.98499995, y: -0.24}
+      - {x: 0.73499995, y: -0.19}
+      - {x: 0.415, y: -0.099999994}
+      - {x: 0.235, y: -0.06}
+      - {x: 0.114999995, y: -0.04}
+      - {x: 0.295, y: 0.07}
+      - {x: 0.325, y: 0.089999996}
+      - {x: 0.325, y: 0.13}
+      - {x: 0.60499996, y: 0.14999999}
+      - {x: 0.775, y: 0.19999999}
+      - {x: 0.875, y: 0.25}
+      - {x: 1.015, y: 0.29}
+      - {x: 1.125, y: 0.34}
+      - {x: 1.225, y: 0.42999998}
+      - {x: 1.285, y: 0.53}
+      - {x: 1.275, y: 0.56}
+      - {x: 0.695, y: 0.56}
+      - {x: 0.685, y: 0.57}
+      - {x: 0.42499998, y: 0.59}
+      - {x: 0.055, y: 0.65}
+      - {x: -0.295, y: 0.71}
+      - {x: -0.385, y: 0.71999997}
+      - {x: -0.45499998, y: 0.71999997}
+      - {x: -0.505, y: 0.69}
+      - {x: -0.525, y: 0.61}
+      - {x: -0.475, y: 0.45999998}
+      - {x: -0.45499998, y: 0.32}
+      - {x: -0.505, y: 0.19999999}
+      - {x: -0.715, y: 0.01}
+      - {x: -0.78499997, y: 0}
+      - {x: -0.875, y: 0.04}
+      - {x: -0.97499996, y: 0.049999997}
+      - {x: -1.0649999, y: 0.01}
+      - {x: -1.145, y: -0.03}
+      - {x: -1.235, y: -0.12}
+      - {x: -1.295, y: -0.19999999}
+      - {x: -1.345, y: -0.19}
+      - {x: -1.435, y: -0.25}
+      - {x: -1.555, y: -0.37}
+      - {x: -1.5749999, y: -0.42999998}
+      - {x: -1.555, y: -0.45}
+      - {x: -1.435, y: -0.47}
+      - {x: -1.3349999, y: -0.45999998}
+      - {x: -1.225, y: -0.5}
+      - {x: -1.095, y: -0.53}
+      - {x: -1.015, y: -0.52}
+      - {x: -0.955, y: -0.48}
+      - {x: -0.895, y: -0.56}
+      - {x: -0.775, y: -0.65999997}
+      - {x: -0.705, y: -0.64}
+      - {x: -0.635, y: -0.68}
+      - {x: -0.565, y: -0.65999997}
+      - {x: -0.475, y: -0.71}
+      - {x: -0.36499998, y: -0.71999997}
+      - {x: -0.114999995, y: -0.71999997}
+      - {x: -0.005, y: -0.69}
+      - {x: 0.515, y: -0.51}
+      - {x: 0.865, y: -0.39999998}
 --- !u!114 &114231342829404070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,6 +154,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 300
   playSEName: HitSE
+--- !u!114 &114845195876318864
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046706061683702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04202c06cf1afda4a9b389aa24b54aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveChangeLeftRight: 0
+  modeChange: 0
+  speed: 0
+  distance: 4
 --- !u!212 &212031096900628924
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,7 +204,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3d10c48fd66d34a49bea23d15be0addb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1487262aaa937b44e8f979a6ce55d2ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
