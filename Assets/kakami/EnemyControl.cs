@@ -27,6 +27,9 @@ public class EnemyControl : MonoBehaviour {
             if (Mathf.Abs(transform.position.x) > distance)
             {
                 speed *= -1;
+                Vector3 direction = transform.localScale;
+                direction.x *= -1;
+                transform.localScale = direction;
             }
         }
         else
