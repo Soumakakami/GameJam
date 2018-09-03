@@ -36,7 +36,7 @@ public class TitleController : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine("Sample",fadeSpeed);
+            StartCoroutine("GameStart");
         }
     }
 
