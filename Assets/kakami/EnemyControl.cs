@@ -43,9 +43,9 @@ public class EnemyControl : MonoBehaviour {
                 speed = Random.Range(randomSpeedFast, randomSpeedSlow)*angle;
                 angle *= -1;
 
-                //Vector3 direction = transform.localScale;
-                //direction.x *= -1;
-                //transform.localScale = direction;
+                Vector3 direction = transform.localScale;
+                direction.x *= -1;
+                transform.localScale = direction;
 
                 transform.position = new Vector2(distance*angle,Random.Range(randomHeight,randomLow));
                 
