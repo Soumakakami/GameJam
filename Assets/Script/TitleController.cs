@@ -5,12 +5,11 @@ using UnityEngine.UI;
 
 public class TitleController : MonoBehaviour {
 
-    public Text clickText;      //クリックしてくださいのテキスト
+    Text clickText;      //クリックしてくださいのテキスト
 
-    bool fadeOut;        //FadeOutしてるかのフラグ
     bool fadeDone;       //FadeOutが完了したらtrue
 
-    [SerializeField,Header("消える秒数")]
+    [SerializeField,Header("消えるまでの秒数")]
     float fadeSpeed;         //消え切る時間
 
     float alpha;        //TitleとTextのアルファ値
@@ -18,7 +17,6 @@ public class TitleController : MonoBehaviour {
     {
         clickText = GameObject.Find("ToClick").GetComponent<Text>();
         fadeDone = false;
-        fadeOut = false;
         alpha = 1f;
     }
 
@@ -29,26 +27,22 @@ public class TitleController : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            fadeOut = true;
+            StartCoroutine("Sample",fadeSpeed);
         }
     }
 
     /// <summary>
     /// FadeInOut時の処理
     /// </summary>
-    void FadeOut()
+    private IEnumerator Sample(float speed)
     {
-        if (fadeOut == true)
+        while (alpha >= 0)
         {
-            alpha -= Time.deltaTime;
-            clickText.color = new Color(0,0,0,alpha);
+            alpha -= 0.01f;
+            clickText.color = new Color(0, 0, 0, alpha);
+            yield return null;
         }
-
-        if (alpha<=0)
-        {
-            fadeOut = false;
-            fadeDone = true;
-        }
+        yield return null;
     }
 
     /// <summary>
@@ -57,7 +51,6 @@ public class TitleController : MonoBehaviour {
     public void ResetTitle()
     {
         fadeDone = false;
-        fadeOut = false;
         alpha = 1f;
         clickText.color = new Color(0, 0, 0,1);
     }
@@ -76,10 +69,8 @@ public class TitleController : MonoBehaviour {
         SetUp();
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
         ClickController();
-        FadeOut();
 	}
 }
